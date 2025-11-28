@@ -1,0 +1,124 @@
+/* ===========================
+   Global Styles & Variables
+   =========================== */
+
+:root {
+    --max-width: 1200px;
+    --color-bg: #ffffff;
+    --color-text: #111111;
+    --color-primary: #0055ff;
+    --color-gray: #f5f5f5;
+
+    --header-height: 70px;
+    --transition-fast: 0.25s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+/* Centered max-width wrapper */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ===========================
+   Header + Navigation (Flexbox)
+   =========================== */
+
+.header {
+    background: var(--color-gray);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Mobile Menu Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+}
+
+/* ===========================
+   Responsive Navigation
+   =========================== */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* You can replace this with a mobile menu */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* ===========================
+   Content Sections
+   =========================== */
+
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.footer {
+    background: var(--color-gray);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}

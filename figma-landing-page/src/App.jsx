@@ -3,12 +3,12 @@ import './App.css';
 function App() {
     return (
         <div className='bg-black'>
-            <heade>
+            <header>
                 <NavBar />
-            </heade>
+            </header>
             <main className='container mx-auto'>
                 <Hero />
-                <Customers />
+                <Brands />
             </main>
         </div>
     );
@@ -16,11 +16,11 @@ function App() {
 
 function NavBar() {
     return (
-        <div className='container my-0 mx-auto pt-5 pb-29 flex justify-between items-center'>
-            <div>
-                <img src='./public/Figmalogo.svg' alt='Figma Logo' />
+        <div className='max-w-full my-0 pt-5 pb-34 flex justify-between items-center'>
+            <div className='ml-20'>
+                <img src='./Figmalogo.svg' alt='Figma Logo' />
             </div>
-            <nav className='flex justify-between items-center gap-5 text-gray-400'>
+            <nav className='mr-20 flex justify-between items-center gap-5 text-gray-400'>
                 <a href='#'>Features</a>
                 <a href='#'>Pricing</a>
                 <a href='#'>Customers</a>
@@ -36,7 +36,7 @@ function NavBar() {
 
 function Hero() {
     return (
-        <section className='pb-20'>
+        <section className='mb-48'>
             <div className='flex justify-between items-center gap-10'>
                 <div className='w-1/3'>
                     <h1 className='text-white text-7xl font-bold'>
@@ -58,8 +58,12 @@ function Hero() {
     );
 }
 
-function Customers() {
-    return <section></section>;
+function Brands() {
+    return (
+        <section className='text-center'>
+            <p className='text-white'>Empowering innovative brands</p>
+        </section>
+    );
 }
 
 export default App;

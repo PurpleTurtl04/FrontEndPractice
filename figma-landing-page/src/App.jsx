@@ -61,7 +61,6 @@ function Hero() {
 
 function Brands() {
     return (
-        // <section className="mb-48 px-22">
         <section className="mb-48">
             <p className="mb-20 text-center text-white">
                 Empowering innovative brands

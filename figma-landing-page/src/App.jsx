@@ -2,11 +2,11 @@ import './App.css';
 
 function App() {
     return (
-        <div className="bg-black">
+        <div className="container max-w-full bg-black">
             <header>
                 <NavBar />
             </header>
-            <main className="container mx-auto flex-col">
+            <main className="mx-auto flex max-w-7xl flex-col items-center px-10">
                 <Hero />
                 <Brands />
                 <Collaborate />
@@ -17,11 +17,11 @@ function App() {
 
 function NavBar() {
     return (
-        <div className="my-0 flex max-w-full items-center justify-between pt-5 pb-34">
-            <div className="ml-20">
+        <div className="mx-auto my-0 flex max-w-screen items-center justify-between px-8 pt-5 pb-34">
+            <div>
                 <img src="./Figmalogo.svg" alt="Figma Logo" />
             </div>
-            <nav className="mr-20 flex items-center justify-between gap-11 text-gray-400">
+            <nav className="flex items-center justify-between gap-11 text-gray-400">
                 <a href="#">Features</a>
                 <a href="#">Pricing</a>
                 <a href="#">Customers</a>
@@ -137,7 +137,7 @@ function Collaborate() {
             <h3 className="mb-7 text-xl text-white">
                 Collaborate with everyone, at every phase
             </h3>
-            <p className="mx-auto max-w-lg text-white">
+            <p className="max-w-lg text-white">
                 Each contributor owns their part of the creative process and
                 stays in sync along the way—across any platform.
             </p>

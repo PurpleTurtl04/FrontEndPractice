@@ -12,6 +12,7 @@ function App() {
                 <Collaborate />
                 <SignUpForm />
             </main>
+            <Footer />
         </div>
     );
 }
@@ -155,11 +156,11 @@ function Collaborate() {
 function Collaborators() {
     return (
         <div className="mb-10 flex justify-between gap-8">
-            <div className="flex flex-col">
+            <div className="flex max-w-80 flex-col">
                 <img
                     src="/src/assets/designers_image-min.jpg"
                     alt="Designer Example"
-                    className="mb-9 size-80"
+                    className="mb-9"
                 />
                 <h3 className="mb-4 pl-px text-xl">Your designers</h3>
                 <p className="pl-px">
@@ -168,7 +169,7 @@ function Collaborators() {
                     work.
                 </p>
             </div>
-            <div>
+            <div className="flex max-w-80 flex-col">
                 <img
                     src="/src/assets/stakeholders_image-min.jpg"
                     alt="Stakeholder Example"
@@ -176,11 +177,11 @@ function Collaborators() {
                 />
                 <h3 className="mb-4 pl-px text-xl">Your stakeholders</h3>
                 <p className="pl-px">
-                    Engineers always have access to the current source-of-truth
-                    and can inspect elements, export assets, and copy code.
+                    Simply send a link to collect feedback, get change requests,
+                    and allow stakeholders to make copy updates in your designs.
                 </p>
             </div>
-            <div>
+            <div className="flex max-w-80 flex-col">
                 <img
                     src="/src/assets/developers_image-min.jpg"
                     alt="Developer Example"
@@ -198,7 +199,7 @@ function Collaborators() {
 
 function SignUpForm() {
     return (
-        <section className="flex w-lvw flex-col items-center bg-white pt-31 text-center text-black">
+        <section className="0 flex w-lvw flex-col items-center bg-white pt-31 pb-42 text-center text-black">
             <p className="mb-11 font-semibold">Try Figma for Free</p>
             <button className="mb-5 flex w-sm items-center justify-center rounded-sm border border-solid border-gray-300 px-25 py-4">
                 <img src="/src/assets/Google.svg" alt="Google Logo" /> Sign up
@@ -214,7 +215,88 @@ function SignUpForm() {
             <button className="mb-5 w-sm rounded-sm border border-solid bg-green-400 py-4 pl-5 text-center text-white">
                 Create account...
             </button>
+            <p className="mb-5 text-blue-300">Sign up with SAML SSO</p>
+            <p className="text-gray-400">
+                Already have an account?{' '}
+                <span className="text-blue-300">Sing in</span>
+            </p>
         </section>
+    );
+}
+
+function Footer() {
+    return (
+        <footer className="mb-30 flex justify-between bg-white pl-20 text-black">
+            <div className="flex w-1/5 flex-col gap-3">
+                <div className="mb-4">
+                    <img
+                        src="/src/assets/figma logo footer.svg"
+                        alt="Figma Logo"
+                    />
+                </div>
+                <div className="flex gap-2">
+                    <img
+                        src="/src/assets/Instagram-dark.svg"
+                        alt="Instagram Logo"
+                    />
+                    <p>Instagram</p>
+                </div>
+                <div className="flex gap-2">
+                    <img
+                        src="/src/assets/Facebook-dark.svg"
+                        alt="Instagram Logo"
+                    />
+                    <p>Facebook</p>
+                </div>
+                <div className="flex gap-2">
+                    <img
+                        src="/src/assets/Twitter-dark.svg"
+                        alt="Instagram Logo"
+                    />
+                    <p>Twitter</p>
+                </div>
+            </div>
+            <div className="flex w-1/5 flex-col gap-2">
+                <h4 className="mb-2 font-semibold">Use Cases</h4>
+                <p>UI Design</p>
+                <p>UX Design</p>
+                <p>Prototyping</p>
+                <p>Graphic Design</p>
+                <p>Wireframing</p>
+                <p>Brainstorming</p>
+            </div>
+            <div className="flex w-1/5 flex-col gap-2">
+                <h4 className="mb-2 font-semibold">Explore</h4>
+                <p>Figma</p>
+                <p>Customers</p>
+                <p>Why I Love Figma</p>
+                <p>Blog</p>
+                <p>Pricing</p>
+                <p>Features</p>
+                <p>Contact</p>
+                <p>Learn Design</p>
+            </div>
+            <div className="flex w-1/5 flex-col gap-2">
+                <h4 className="mb-2 font-semibold">Resources</h4>
+                <p>Community Resources Hub</p>
+                <p>Support</p>
+                <p>Education</p>
+                <p>Developers</p>
+                <p>Downloads</p>
+                <p>Releases</p>
+                <p>Careers</p>
+                <p>Legal</p>
+                <p>Design Dictionary</p>
+            </div>
+            <div className="flex w-1/5 flex-col gap-2">
+                <h4 className="mb-2 font-semibold">Compare</h4>
+                <p>Sketch</p>
+                <p>Adobe XD</p>
+                <p>Invision Studio</p>
+                <p>Framer</p>
+                <p>Design on Windows</p>
+            </div>
+        </footer>
     );
 }
 

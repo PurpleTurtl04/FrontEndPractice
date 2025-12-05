@@ -63,7 +63,7 @@ function Mockup(){
 
 function SignUp(){
     return(
-        <section className='bg-chatappblue/10 pt-31 pb-25'>           
+        <section className='bg-chatappblue/10 pt-31 pb-25'>
             <div className='flex'>
                 <div className='w-1/2'>
                     <img className='lg:max-w-9/10' src="src/assets/signup.png" alt="People in a coffee shop" />
